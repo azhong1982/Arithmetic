@@ -88,7 +88,90 @@ class Arithmetic {
             return $this->Fibonacci($n - 1, $strat, $strat + $end);
         }
     }
+/**
 
+	 * 判断完全数
+
+	 * 
+
+	 * @param num
+
+	 * @return
+
+	 */
+	function isWanshu(int num) {
+		boolean flag = false;
+		int yzh = 0;// 各因子之和
+
+
+		// 循环计算所有因子之和
+
+		for (int i = 1; i <= num / 2; i++) {
+			if (num % i == 0) {
+				yzh = yzh + i;
+			}
+		}
+
+		// 判断所有因子之和是否和该数本身相等,相等则为完数
+
+		if (yzh == num) {
+			flag = true;
+		}
+
+		return flag;
+	}
+ 
+	public function jitu(String[] args) {
+		for (int ji = 0; ji <= 35; ji++) {
+			int tu = 35 - ji;
+			if ((2 * ji + 4 * tu) == 94) {
+				System.out.println("鸡=" + ji + "\t" + "兔=" + tu);
+			}
+		
+	}
+ /**
+
+ * 舍罕王赏麦子 Created by titi on 2017/4/17.
+
+ */
+	public function maizi(String[] args) {
+		// 麦子数量
+
+		double sum = 0;
+		double temp = 1;
+		// 国际象棋棋盘共64个格
+
+		for (int i = 1; i <= 64; i++) {
+			// 等比数列
+
+			temp = temp * 2;
+			sum = sum + temp;
+		}
+		System.out.println("赏赐的麦子数量:" + sum + "粒");
+		// 假设25000粒麦子为1公斤
+
+		double weight = sum / 25000 / 1000;
+		System.out.println("约合:" + weight + "吨");
+	}
+
+}
+/**
+
+ * 木马板凳 Created by titi on 2017/4/18.
+
+ */
+
+	public function  mmbd(String[] args) {
+		for (int muma = 1; muma <= 33; muma++) {
+			int bandeng = 33 - muma;
+			// 木马三只脚,板凳4只脚
+
+			if ((3 * muma + 4 * bandeng) == 100) {
+				System.out.println("木马=" + muma + "\t" + "板凳=" + bandeng);
+			}
+		}
+	
+}
     /**
      * Binsch 二分查找 
      * 函数的含义说明 
